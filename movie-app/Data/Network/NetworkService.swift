@@ -11,14 +11,15 @@ class NetworkService {
     static let shared = NetworkService()
     private init() {}
     
-    private let apiKey = "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI3MjNkODY3MGJlMTY3ZTRkOWIxYzg4MThjYjJmYWJlYiIsIm5iZiI6MTczOTUyNTgyMy43NjYsInN1YiI6IjY3YWYwZWJmODBmNzZkNjFlYjhlNjQxMiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.nRuA1LJaOD4DkGM1sHZgGT0dMtJi3eSqFqTTl39bIp4"
+    private let apiKey = "723d8670be167e4d9b1c8818cb2fabeb"
 
     
     private func buildURL(baseURL: String, queryParams: [String: String]) -> URL? {
         var components = URLComponents(string: baseURL)
         var allQueryItems = queryParams.map { URLQueryItem(name: $0.key, value: $0.value) }
         
-        allQueryItems.append(URLQueryItem(name: "api_key", value: "723d8670be167e4d9b1c8818cb2fabeb"))
+        allQueryItems.append(URLQueryItem(name: "api_key",
+                                          value: apiKey))
         components?.queryItems = allQueryItems
         return components?.url
     }

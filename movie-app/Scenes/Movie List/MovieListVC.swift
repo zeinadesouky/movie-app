@@ -26,6 +26,16 @@ class MovieListVC: UIViewController, MovieListView {
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter.loadMovies()
+        setupTableView()
+        setupSearchBar()
+    }
+    
+    private func setupSearchBar() {
+        searchBar.showsCancelButton = true
+        searchBar.delegate = self
+    }
+    
+    private func setupTableView() {
         tableView.dataSource = self
         tableView.delegate = self
         tableView.register(UINib(nibName: "MovieListCell", bundle: nil), forCellReuseIdentifier: "MovieListCell")
@@ -71,5 +81,21 @@ extension MovieListVC: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MovieListCell", for: indexPath) as! MovieListCell
         presenter.configure(for: cell, at: indexPath)
         return cell
+    }
+}
+
+extension MovieListVC: UISearchBarDelegate {
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        presenter.searchBarCleared()
+    }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        if searchText.isEmpty {
+            presenter.searchBarCleared()
+        }
+    }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        presenter.searchMovies(with: searchBar.text ?? "")
     }
 }

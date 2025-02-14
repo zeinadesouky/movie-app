@@ -10,10 +10,14 @@ import UIKit
 
 class MovieListModuleBuilder {
     static func build() -> MovieListVC {
-        let service = FetchMoviesService()
-        let useCase = FetchMoviesUseCaseImp(movieService: service)
+        let fetchService = FetchMoviesService()
+        let searchService = SearchMovieService()
+        let fetchMoviesUseCase = FetchMoviesUseCaseImp(movieService: fetchService)
+        let searchMoviesUseCase = SearchMoviesUseCaseImp(service: searchService)
         let viewController = MovieListVC()
-        let presenter = MovieListPresenter(view: viewController, fetchMoviesUseCase: useCase)
+        let presenter = MovieListPresenter(view: viewController,
+                                           fetchMoviesUseCase: fetchMoviesUseCase,
+                                           searchMoviesUseCase: searchMoviesUseCase)
         viewController.presenter = presenter
         return viewController
     }
