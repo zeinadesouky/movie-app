@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "EE65E465-BD2E-4E53-A673-FB5CA3490993"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "79C447E1-5660-472C-8A14-C5B42C063616"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "movie-app/Scenes/Movie List/MovieListPresenter.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "49"
+            endingLineNumber = "49"
+            landmarkName = "loadMovies()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "79C447E1-5660-472C-8A14-C5B42C063616 - 5dae007ae2d1bea0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in closure #1 (Swift.Result&lt;movie_app.MovieListResponse, Swift.Error&gt;) -&gt; () in movie_app.MovieListPresenter.loadMovies() -&gt; ()"
+                  moduleName = "movie-app"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/robusta/Documents/movie-app/movie-app/Scenes/Movie%20List/MovieListPresenter.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "50"
+                  endingLineNumber = "50"
+                  offsetFromSymbolStart = "988">
+               </Location>
+               <Location
+                  uuid = "79C447E1-5660-472C-8A14-C5B42C063616 - 5dae007ae2d1be8f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in closure #1 (Swift.Result&lt;movie_app.MovieListResponse, Swift.Error&gt;) -&gt; () in movie_app.MovieListPresenter.loadMovies() -&gt; ()"
+                  moduleName = "movie-app"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/robusta/Documents/movie-app/movie-app/Scenes/Movie%20List/MovieListPresenter.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "49"
+                  endingLineNumber = "49"
+                  offsetFromSymbolStart = "800">
+               </Location>
+               <Location
+                  uuid = "79C447E1-5660-472C-8A14-C5B42C063616 - 5dae007ae2d1be8f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in closure #1 (Swift.Result&lt;movie_app.MovieListResponse, Swift.Error&gt;) -&gt; () in movie_app.MovieListPresenter.loadMovies() -&gt; ()"
+                  moduleName = "movie-app"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/robusta/Documents/movie-app/movie-app/Scenes/Movie%20List/MovieListPresenter.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "49"
+                  endingLineNumber = "49"
+                  offsetFromSymbolStart = "808">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5D962C28-F2FA-49A8-8E04-690139DE426F"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "movie-app/Scenes/Movie List/MovieListPresenter.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
+            landmarkName = "loadMovies()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "5D962C28-F2FA-49A8-8E04-690139DE426F - 5dae007ae2d1bd6e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in closure #1 (Swift.Result&lt;movie_app.MovieListResponse, Swift.Error&gt;) -&gt; () in movie_app.MovieListPresenter.loadMovies() -&gt; ()"
+                  moduleName = "movie-app"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/robusta/Documents/movie-app/movie-app/Scenes/Movie%20List/MovieListPresenter.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "48"
+                  endingLineNumber = "48"
+                  offsetFromSymbolStart = "584">
+               </Location>
+               <Location
+                  uuid = "5D962C28-F2FA-49A8-8E04-690139DE426F - 5dae007ae2d1bd4d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in closure #1 (Swift.Result&lt;movie_app.MovieListResponse, Swift.Error&gt;) -&gt; () in movie_app.MovieListPresenter.loadMovies() -&gt; ()"
+                  moduleName = "movie-app"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/robusta/Documents/movie-app/movie-app/Scenes/Movie%20List/MovieListPresenter.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "47"
+                  endingLineNumber = "47"
+                  offsetFromSymbolStart = "500">
+               </Location>
+               <Location
+                  uuid = "5D962C28-F2FA-49A8-8E04-690139DE426F - 5dae007ae2d1bd4d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in closure #1 (Swift.Result&lt;movie_app.MovieListResponse, Swift.Error&gt;) -&gt; () in movie_app.MovieListPresenter.loadMovies() -&gt; ()"
+                  moduleName = "movie-app"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/robusta/Documents/movie-app/movie-app/Scenes/Movie%20List/MovieListPresenter.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "47"
+                  endingLineNumber = "47"
+                  offsetFromSymbolStart = "508">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B9512673-EE69-45A5-9B2E-359DEE145406"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "movie-app/Scenes/Movie List/MovieListPresenter.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+            landmarkName = "configure(for:at:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "B9512673-EE69-45A5-9B2E-359DEE145406 - a443e53a0e4676f2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "movie_app.MovieListPresenter.configure(for: movie_app.MovieListCell, at: Foundation.IndexPath) -&gt; ()"
+                  moduleName = "movie-app"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/robusta/Documents/movie-app/movie-app/Scenes/Movie%20List/MovieListPresenter.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "35"
+                  endingLineNumber = "35"
+                  offsetFromSymbolStart = "60">
+               </Location>
+               <Location
+                  uuid = "B9512673-EE69-45A5-9B2E-359DEE145406 - a443e53a0e4676f2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "movie_app.MovieListPresenter.configure(for: movie_app.MovieListCell, at: Foundation.IndexPath) -&gt; ()"
+                  moduleName = "movie-app"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/robusta/Documents/movie-app/movie-app/Scenes/Movie%20List/MovieListPresenter.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "35"
+                  endingLineNumber = "35"
+                  offsetFromSymbolStart = "124">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "ECBEBA4A-F262-454D-87EE-0E4D04C1990C"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "movie-app/Scenes/Movie List/MovieListVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "72"
+            endingLineNumber = "72"
+            landmarkName = "tableView(_:cellForRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "DB4093FC-957B-4133-95CB-63C620F7DDF4"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "movie-app/Scenes/Movie List/Movie List Cell/MovieListCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
+            landmarkName = "display(movieInfo:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
