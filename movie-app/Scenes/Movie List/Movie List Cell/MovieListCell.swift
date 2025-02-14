@@ -8,7 +8,7 @@
 import UIKit
 
 protocol MovieListCellDelegate: AnyObject {
-    func didTapAddToWishlist(_ cell: MovieListCell)
+    func didTapAddToWatchlist(_ cell: MovieListCell)
 }
 
 class MovieListCell: UITableViewCell {
@@ -37,6 +37,6 @@ class MovieListCell: UITableViewCell {
     }
     
     @IBAction func addToWishlistTapped(_ sender: Any) {
-        delegate?.didTapAddToWishlist(self)
+        delegate?.didTapAddToWatchlist(self)
     }
 }

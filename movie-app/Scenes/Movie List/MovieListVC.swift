@@ -9,7 +9,6 @@ import Foundation
 import UIKit
 
 protocol MovieListView: AnyObject {
-    func displayMovies(_ movies: [Movie])
     func displayError(_ message: String)
     func navigateToMovieDetails(movie: MovieEntity)
     func reloadTableView()
@@ -45,11 +44,6 @@ class MovieListVC: UIViewController, MovieListView {
         tableView.reloadData()
     }
     
-    func displayMovies(_ movies: [Movie]) {
-        self.movies = movies
-        print("Movies Loaded: \(movies.map { $0.title })")
-    }
-    
     func displayError(_ message: String) {
         print("Error: \(message)")
     }
@@ -79,6 +73,7 @@ extension MovieListVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MovieListCell", for: indexPath) as! MovieListCell
+        cell.delegate = self
         presenter.configure(for: cell, at: indexPath)
         return cell
     }
@@ -97,5 +92,13 @@ extension MovieListVC: UISearchBarDelegate {
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         presenter.searchMovies(with: searchBar.text ?? "")
+    }
+}
+
+extension MovieListVC: MovieListCellDelegate {
+    func didTapAddToWatchlist(_ cell: MovieListCell) {
+        if let indexPath = tableView.indexPath(for: cell) {
+            presenter.handleWatchlistOperations(at: indexPath, for: cell)
+        }
     }
 }

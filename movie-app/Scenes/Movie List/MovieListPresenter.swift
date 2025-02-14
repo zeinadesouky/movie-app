@@ -12,7 +12,7 @@ class MovieListPresenter {
     var isViewingSearchResults: Bool = false
     private let fetchMoviesUseCase: FetchMoviesUseCase
     private let searchMoviesUseCase: SearchMoviesUseCase
-    private var popularMovies: [MovieEntity] = []
+    private var popularMovies: [Movie] = []
     private var groupedMovies: [String: [MovieEntity]] = [:]
     private var sortedSections: [String] = []
     
@@ -47,7 +47,7 @@ class MovieListPresenter {
                 switch result {
                 case .success(let movies):
                     let movieEntities = (movies.results ?? []).map { $0.toMovieEntity() }
-                    self?.popularMovies = movieEntities
+                    self?.popularMovies = movies.results ?? []
                     self?.groupMoviesByYear(movieEntities)
                     self?.view?.reloadTableView()
                 case .failure(let error):
@@ -86,10 +86,27 @@ class MovieListPresenter {
     
     func searchBarCleared() {
         if isViewingSearchResults {
-            groupMoviesByYear(popularMovies)
+            let movieEntities = (popularMovies).map { $0.toMovieEntity() }
+            groupMoviesByYear(movieEntities)
             view?.reloadTableView()
             self.isViewingSearchResults = false
         }
+    }
+    
+    func handleWatchlistOperations(at indexPath: IndexPath, for cell: MovieListCell) {
+        var pendingMovie = movie(at: indexPath)
+        let key = sortedSections[indexPath.section]
+        
+        if (pendingMovie.isInWatchlist ?? false) {
+            UserUtilities.removeFromWatchlist(movieID: pendingMovie.id ?? 0)
+            pendingMovie.isInWatchlist = false
+        } else {
+            UserUtilities.addToWatchlist(movieID: pendingMovie.id ?? 0)
+            pendingMovie.isInWatchlist = true
+        }
+        groupedMovies[key]![indexPath.row] = pendingMovie
+        cell.setWatchlistButton(for: pendingMovie.isInWatchlist ?? false)
+        
     }
     
     // Private Helpers
@@ -110,8 +127,6 @@ class MovieListPresenter {
         
         self.groupedMovies = tempGroupedMovies
         self.sortedSections = tempGroupedMovies.keys.sorted(by: { $0 > $1 })
-        
-
     }
     
 }
