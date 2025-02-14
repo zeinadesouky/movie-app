@@ -9,8 +9,8 @@ import Foundation
 
 class MovieDetailsPresenter {
     weak var view: MovieDetailsView?
+    let movieId: Int?
     private let fetchMovieDetailsUseCase: FetchMovieDetailsUseCase
-    private let movieId: Int?
     
     init(view: MovieDetailsView, fetchMovieDetailsUseCase: FetchMovieDetailsUseCase, movieId: Int) {
         self.view = view

@@ -13,7 +13,7 @@
             <connections>
                 <outlet property="addToWatchlistButton" destination="z0i-pV-SaK" id="hZ1-L4-koV"/>
                 <outlet property="castAndCrewContainer" destination="kLw-Fb-gvB" id="fgo-Zg-9Ye"/>
-                <outlet property="movieDetailsContainer" destination="EXa-p9-J3d" id="qHZ-Cy-fQL"/>
+                <outlet property="movieDetailsContainer" destination="SdZ-gn-eNc" id="JNU-xP-bbt"/>
                 <outlet property="movieIcon" destination="unj-hm-6Cd" id="zsS-NL-TuZ"/>
                 <outlet property="movieOverview" destination="lGG-zj-Ogu" id="mKf-Mr-Wb0"/>
                 <outlet property="movieTagLine" destination="TjH-Li-MUM" id="2pN-4m-Ewt"/>
@@ -34,7 +34,7 @@
                     <rect key="frame" x="25" y="59" width="343" height="759"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="mfb-9E-vMR">
-                            <rect key="frame" x="0.0" y="0.0" width="343" height="724"/>
+                            <rect key="frame" x="0.0" y="0.0" width="343" height="846"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SdZ-gn-eNc">
                                     <rect key="frame" x="0.0" y="0.0" width="343" height="428"/>
@@ -123,11 +123,14 @@
                                     </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" placeholderIntrinsicWidth="343" placeholderIntrinsicHeight="128" translatesAutoresizingMaskIntoConstraints="NO" id="EXa-p9-J3d">
-                                    <rect key="frame" x="0.0" y="448" width="343" height="128"/>
+                                    <rect key="frame" x="0.0" y="448" width="343" height="250"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" priority="750" constant="250" id="OVF-A1-Mbl"/>
+                                    </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" placeholderIntrinsicWidth="343" placeholderIntrinsicHeight="128" translatesAutoresizingMaskIntoConstraints="NO" id="kLw-Fb-gvB">
-                                    <rect key="frame" x="0.0" y="596" width="343" height="128"/>
+                                    <rect key="frame" x="0.0" y="718" width="343" height="128"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </view>
                             </subviews>

@@ -13,6 +13,7 @@ protocol MovieDetailsView: AnyObject {
     func setWatchlistButton(for isMovieInList: Bool)
     func loadDetailsView()
     func hideDetailsViewLoader()
+    func setupSimilarMovies(with movieId: Int)
 }
 
 class MovieDetailsVC: UIViewController, MovieDetailsView {
@@ -37,6 +38,7 @@ class MovieDetailsVC: UIViewController, MovieDetailsView {
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter.loadMovieDetails()
+        setupSimilarMovies(with: presenter.movieId ?? 0)
     }
     
     func display(movieInfo: MovieDetails) {
@@ -53,6 +55,11 @@ class MovieDetailsVC: UIViewController, MovieDetailsView {
     func setWatchlistButton(for isMovieInList: Bool) {
         addToWatchlistButton.setTitle(isMovieInList ? "Remove From Watchlist" : "Add To Your Watchlist", for: .normal)
         addToWatchlistButton.setImage(isMovieInList ? UIImage(systemName: "minus") : UIImage(systemName: "plus"), for: .normal)
+    }
+    
+    func setupSimilarMovies(with movieId: Int) {
+        let similarMoviesVC = SimilarMoviesModuleBuilder.build(with: movieId)
+        add(viewController: similarMoviesVC, to: similarMoviesContainer)
     }
 
     func displayError(_ message: String) {
