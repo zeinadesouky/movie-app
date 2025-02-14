@@ -10,7 +10,7 @@ import UIKit
 
 protocol MovieListView: AnyObject {
     func displayError(_ message: String)
-    func navigateToMovieDetails(movie: MovieEntity)
+    func navigateToMovieDetails(movieId: Int)
     func reloadTableView()
 }
 
@@ -24,9 +24,15 @@ class MovieListVC: UIViewController, MovieListView {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        presenter.loadMovies()
         setupTableView()
         setupSearchBar()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        // REVIST: reloading results is not the optimal way to reflect watchlist status after changing it within product details
+        if presenter.isViewingSearchResults {
+            presenter.searchMovies(with: searchBar.text ?? "")
+        } else { presenter.loadMovies() }
     }
     
     private func setupSearchBar() {
@@ -48,9 +54,9 @@ class MovieListVC: UIViewController, MovieListView {
         print("Error: \(message)")
     }
     
-    func navigateToMovieDetails(movie: MovieEntity) {
-//        let detailsVC = MovieDetailsVC(movie: movie)
-//        navigationController?.pushViewController(detailsVC, animated: true)
+    func navigateToMovieDetails(movieId: Int) {
+        let detailsVC = MovieDetailsBuilder.build(with: movieId)
+        navigationController?.pushViewController(detailsVC, animated: true)
     }
 }
 

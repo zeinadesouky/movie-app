@@ -27,7 +27,7 @@ class MovieListCell: UITableViewCell {
     func display(movieInfo: MovieEntity) {
         movieTitleLabel.text = movieInfo.title ?? "-"
         movieOverviewLabel.text = movieInfo.overview ?? "--"
-        setWatchlistButton(for: movieInfo.isInWatchlist ?? false)
+        setWatchlistButton(for: UserUtilities.loadWatchlist().contains(where: {$0 == movieInfo.id}))
         movieIcon.setImage(movieInfo.posterPath ?? "")
     }
     
