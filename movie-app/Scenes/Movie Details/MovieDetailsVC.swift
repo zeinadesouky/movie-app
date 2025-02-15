@@ -39,6 +39,7 @@ class MovieDetailsVC: UIViewController, MovieDetailsView {
         super.viewDidLoad()
         presenter.loadMovieDetails()
         setupSimilarMovies(with: presenter.movieId ?? 0)
+        setupCredits(with: presenter.movieId ?? 0)
     }
     
     func display(movieInfo: MovieDetails) {
@@ -59,7 +60,13 @@ class MovieDetailsVC: UIViewController, MovieDetailsView {
     
     func setupSimilarMovies(with movieId: Int) {
         let similarMoviesVC = SimilarMoviesModuleBuilder.build(with: movieId)
+        similarMoviesVC.delegate = self
         add(viewController: similarMoviesVC, to: similarMoviesContainer)
+    }
+    
+    func setupCredits(with movieId: Int) {
+        let castAndCrewVC = CastAndCrewModuleBuilder.build(with: movieId)
+        add(viewController: castAndCrewVC, to: castAndCrewContainer)
     }
 
     func displayError(_ message: String) {
@@ -76,5 +83,12 @@ class MovieDetailsVC: UIViewController, MovieDetailsView {
     
     @IBAction func watchListButtonTapped(_ sender: Any) {
         presenter.handleWatchlistOperations()
+    }
+}
+
+extension MovieDetailsVC: SimilarMoviesDelegate {
+    func shouldRemoveSimilarMoviesContainer() {
+        similarMoviesContainer.isHidden = true
+        castAndCrewContainer.isHidden = true
     }
 }

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CastAndCrewVC" customModule="movie_app" customModuleProvider="target">
+            <connections>
+                <outlet property="castCollectionView" destination="Kgx-td-8jr" id="Dsy-87-Fwu"/>
+                <outlet property="containerView" destination="h7O-pP-eXT" id="59f-j0-gUN"/>
+                <outlet property="crewCollectionView" destination="EWX-kP-Jka" id="Kkv-f2-8sF"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="560" height="301"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h7O-pP-eXT">
+                    <rect key="frame" x="0.0" y="0.0" width="560" height="301"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="mSr-LZ-Ol7">
+                            <rect key="frame" x="0.0" y="0.0" width="560" height="301"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="YqY-lL-Hil">
+                                    <rect key="frame" x="0.0" y="0.0" width="560" height="144.66666666666666"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cast" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H0n-BD-GF8">
+                                            <rect key="frame" x="0.0" y="0.0" width="560" height="19.333333333333332"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Kgx-td-8jr">
+                                            <rect key="frame" x="0.0" y="27.333333333333336" width="560" height="117.33333333333331"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="qPq-27-KpK">
+                                                <size key="itemSize" width="128" height="128"/>
+                                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                            </collectionViewFlowLayout>
+                                            <connections>
+                                                <outlet property="dataSource" destination="-1" id="R6C-U0-ewc"/>
+                                                <outlet property="delegate" destination="-1" id="d99-Bp-4Nw"/>
+                                            </connections>
+                                        </collectionView>
+                                    </subviews>
+                                </stackView>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="AfX-dH-KtF">
+                                    <rect key="frame" x="0.0" y="156.66666666666663" width="560" height="144.33333333333337"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Crew" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a9m-Eg-0z2">
+                                            <rect key="frame" x="0.0" y="0.0" width="560" height="19.333333333333332"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="EWX-kP-Jka">
+                                            <rect key="frame" x="0.0" y="27.333333333333343" width="560" height="117"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="hGf-5P-cJO">
+                                                <size key="itemSize" width="128" height="128"/>
+                                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                            </collectionViewFlowLayout>
+                                            <connections>
+                                                <outlet property="dataSource" destination="-1" id="kVe-IT-hGd"/>
+                                                <outlet property="delegate" destination="-1" id="AgU-za-l2o"/>
+                                            </connections>
+                                        </collectionView>
+                                    </subviews>
+                                </stackView>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="mSr-LZ-Ol7" firstAttribute="top" secondItem="h7O-pP-eXT" secondAttribute="top" id="GLU-RM-Eqo"/>
+                        <constraint firstAttribute="trailing" secondItem="mSr-LZ-Ol7" secondAttribute="trailing" id="H5d-8a-NCD"/>
+                        <constraint firstItem="mSr-LZ-Ol7" firstAttribute="leading" secondItem="h7O-pP-eXT" secondAttribute="leading" id="Zoj-nE-7n9"/>
+                        <constraint firstAttribute="bottom" secondItem="mSr-LZ-Ol7" secondAttribute="bottom" id="xkB-pB-u9x"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="h7O-pP-eXT" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="INS-MG-9Xt"/>
+                <constraint firstItem="h7O-pP-eXT" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="T1M-Nk-5rA"/>
+                <constraint firstAttribute="trailing" secondItem="h7O-pP-eXT" secondAttribute="trailing" id="eIg-cK-0pA"/>
+                <constraint firstAttribute="bottom" secondItem="h7O-pP-eXT" secondAttribute="bottom" id="jQM-dz-FMW"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="244.27480916030532" y="-170.77464788732397"/>
+        </view>
+    </objects>
+</document>

@@ -12,6 +12,11 @@ protocol SimilarMoviesView: AnyObject {
     func reloadCollectionView()
     func showContainerLoader()
     func hideContainerLoader()
+    func removeSimilarMoviesContainer()
+}
+
+protocol SimilarMoviesDelegate: AnyObject {
+    func shouldRemoveSimilarMoviesContainer()
 }
 
 class SimilarMoviesVC: UIViewController, SimilarMoviesView {
@@ -20,6 +25,7 @@ class SimilarMoviesVC: UIViewController, SimilarMoviesView {
     @IBOutlet private weak var collectionView: UICollectionView!
     
     var presenter: SimilarMoviesPresenter!
+    weak var delegate: SimilarMoviesDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,6 +50,10 @@ class SimilarMoviesVC: UIViewController, SimilarMoviesView {
     
     func hideContainerLoader() {
         containerView.hideLoading()
+    }
+    
+    func removeSimilarMoviesContainer() {
+        delegate?.shouldRemoveSimilarMoviesContainer()
     }
 }
 

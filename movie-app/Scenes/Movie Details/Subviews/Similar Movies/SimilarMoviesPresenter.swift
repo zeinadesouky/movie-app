@@ -38,6 +38,10 @@ class SimilarMoviesPresenter {
                     self?.similarMovies = movies.results ?? []
                     self?.view?.hideContainerLoader()
                     self?.view?.reloadCollectionView()
+                    if let movieResuls =  self?.similarMovies,
+                       movieResuls.isEmpty {
+                        self?.view?.removeSimilarMoviesContainer()
+                    }
                 case .failure(let error):
                     self?.view?.displayError(error.localizedDescription)
                     self?.view?.hideContainerLoader()
