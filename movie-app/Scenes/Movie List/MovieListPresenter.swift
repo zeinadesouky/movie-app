@@ -111,6 +111,12 @@ class MovieListPresenter {
         
     }
     
+    func resetMovieEntities() {
+        let movieEntities = (popularMovies).map { $0.toMovieEntity() }
+        groupMoviesByYear(movieEntities)
+        self.view?.reloadTableView()
+    }
+    
     // Private Helpers
     private func groupMoviesByYear(_ movies: [MovieEntity]) {
         var tempGroupedMovies: [String: [MovieEntity]] = [:]
