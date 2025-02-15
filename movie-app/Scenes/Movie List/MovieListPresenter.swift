@@ -75,8 +75,10 @@ class MovieListPresenter {
     }
     
     func didSelectMovie(at indexPath: IndexPath) {
-        let movie = movie(at: indexPath)
-        view?.navigateToMovieDetails(movie: movie)
+        guard let movieId = movie(at: indexPath).id else { 
+            self.view?.displayError("can't find this movie")
+            return }
+        view?.navigateToMovieDetails(movieId: movieId)
     }
     
     func movie(at indexPath: IndexPath) -> MovieEntity {

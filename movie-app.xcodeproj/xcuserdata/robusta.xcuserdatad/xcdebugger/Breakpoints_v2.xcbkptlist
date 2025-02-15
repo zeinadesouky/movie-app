@@ -188,8 +188,8 @@
             filePath = "movie-app/Scenes/Movie List/MovieListVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "77"
-            endingLineNumber = "77"
+            startingLineNumber = "83"
+            endingLineNumber = "83"
             landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -197,47 +197,62 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "CB26CE7A-6D77-4AB0-BACE-1BE5A3C7EE5C"
-            shouldBeEnabled = "Yes"
+            uuid = "E336CC9E-FB3D-49F4-80E6-5C05CFA19A8D"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "movie-app/Scenes/Movie List/MovieListVC.swift"
+            filePath = "movie-app/Scenes/Movie List/MovieListPresenter.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "94"
-            endingLineNumber = "94"
-            landmarkName = "searchBarSearchButtonClicked(_:)"
+            startingLineNumber = "92"
+            endingLineNumber = "92"
+            landmarkName = "searchBarCleared()"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "CB26CE7A-6D77-4AB0-BACE-1BE5A3C7EE5C - b688faa42354c528"
+                  uuid = "E336CC9E-FB3D-49F4-80E6-5C05CFA19A8D - ebe560cdbf6e7518"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "movie_app.MovieListVC.searchBar(_: __C.UISearchBar, textDidChange: Swift.String) -&gt; ()"
+                  symbolName = "movie_app.MovieListPresenter.searchBarCleared() -&gt; ()"
                   moduleName = "movie-app"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/robusta/Documents/movie-app/movie-app/Scenes/Movie%20List/MovieListVC.swift"
+                  urlString = "file:///Users/robusta/Documents/movie-app/movie-app/Scenes/Movie%20List/MovieListPresenter.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "94"
-                  endingLineNumber = "94"
-                  offsetFromSymbolStart = "120">
+                  startingLineNumber = "92"
+                  endingLineNumber = "92"
+                  offsetFromSymbolStart = "76">
                </Location>
                <Location
-                  uuid = "CB26CE7A-6D77-4AB0-BACE-1BE5A3C7EE5C - 4a06106cffae41e7"
+                  uuid = "E336CC9E-FB3D-49F4-80E6-5C05CFA19A8D - acc8209b6f0de1f5"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "movie_app.MovieListVC.searchBarSearchButtonClicked(__C.UISearchBar) -&gt; ()"
+                  symbolName = "closure #1 (movie_app.Movie) -&gt; movie_app.MovieEntity in movie_app.MovieListPresenter.searchBarCleared() -&gt; ()"
                   moduleName = "movie-app"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/robusta/Documents/movie-app/movie-app/Scenes/Movie%20List/MovieListVC.swift"
+                  urlString = "file:///Users/robusta/Documents/movie-app/movie-app/Scenes/Movie%20List/MovieListPresenter.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "94"
-                  endingLineNumber = "94"
-                  offsetFromSymbolStart = "76">
+                  startingLineNumber = "92"
+                  endingLineNumber = "92"
+                  offsetFromSymbolStart = "52">
+               </Location>
+               <Location
+                  uuid = "E336CC9E-FB3D-49F4-80E6-5C05CFA19A8D - ebe560cdbf6e7518"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "movie_app.MovieListPresenter.searchBarCleared() -&gt; ()"
+                  moduleName = "movie-app"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/robusta/Documents/movie-app/movie-app/Scenes/Movie%20List/MovieListPresenter.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "92"
+                  endingLineNumber = "92"
+                  offsetFromSymbolStart = "252">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -245,80 +260,222 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "E336CC9E-FB3D-49F4-80E6-5C05CFA19A8D"
-            shouldBeEnabled = "Yes"
+            uuid = "85E015E5-F46D-45FB-BCF0-AD21A56001D7"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "movie-app/Scenes/Movie List/MovieListPresenter.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "90"
-            endingLineNumber = "90"
-            landmarkName = "searchBarCleared()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "A3A3AB81-4AE1-4538-ABAF-836E3EB995F7"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "movie-app/Scenes/Movie List/Movie List Cell/MovieListCell.swift"
+            filePath = "movie-app/Scenes/Movie Details/MovieDetailsPresenter.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "40"
             endingLineNumber = "40"
-            landmarkName = "addToWishlistTapped(_:)"
+            landmarkName = "handleWatchlistOperations()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "85E015E5-F46D-45FB-BCF0-AD21A56001D7 - f411b905ce84e881"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "movie_app.MovieDetailsPresenter.handleWatchlistOperations() -&gt; ()"
+                  moduleName = "movie-app"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/robusta/Documents/movie-app/movie-app/Scenes/Movie%20Details/MovieDetailsPresenter.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "41"
+                  endingLineNumber = "41"
+                  offsetFromSymbolStart = "200">
+               </Location>
+               <Location
+                  uuid = "85E015E5-F46D-45FB-BCF0-AD21A56001D7 - f411b905ce84e8e0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "movie_app.MovieDetailsPresenter.handleWatchlistOperations() -&gt; ()"
+                  moduleName = "movie-app"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/robusta/Documents/movie-app/movie-app/Scenes/Movie%20Details/MovieDetailsPresenter.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "40"
+                  endingLineNumber = "40"
+                  offsetFromSymbolStart = "204">
+               </Location>
+               <Location
+                  uuid = "85E015E5-F46D-45FB-BCF0-AD21A56001D7 - f411b905ce84e8e0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "movie_app.MovieDetailsPresenter.handleWatchlistOperations() -&gt; ()"
+                  moduleName = "movie-app"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/robusta/Documents/movie-app/movie-app/Scenes/Movie%20Details/MovieDetailsPresenter.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "40"
+                  endingLineNumber = "40"
+                  offsetFromSymbolStart = "188">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "36B42530-D438-4ED6-A44E-C4825CA8B822"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "movie-app/Scenes/Movie Details/MovieDetailsPresenter.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
+            landmarkName = "handleWatchlistOperations()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "36B42530-D438-4ED6-A44E-C4825CA8B822 - f411b905ce84e8ae"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "movie_app.MovieDetailsPresenter.handleWatchlistOperations() -&gt; ()"
+                  moduleName = "movie-app"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/robusta/Documents/movie-app/movie-app/Scenes/Movie%20Details/MovieDetailsPresenter.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "42"
+                  endingLineNumber = "42"
+                  offsetFromSymbolStart = "212">
+               </Location>
+               <Location
+                  uuid = "36B42530-D438-4ED6-A44E-C4825CA8B822 - f411b905ce84e8ae"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "movie_app.MovieDetailsPresenter.handleWatchlistOperations() -&gt; ()"
+                  moduleName = "movie-app"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/robusta/Documents/movie-app/movie-app/Scenes/Movie%20Details/MovieDetailsPresenter.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "42"
+                  endingLineNumber = "42"
+                  offsetFromSymbolStart = "280">
+               </Location>
+               <Location
+                  uuid = "36B42530-D438-4ED6-A44E-C4825CA8B822 - f411b905ce84e8ae"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "movie_app.MovieDetailsPresenter.handleWatchlistOperations() -&gt; ()"
+                  moduleName = "movie-app"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/robusta/Documents/movie-app/movie-app/Scenes/Movie%20Details/MovieDetailsPresenter.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "42"
+                  endingLineNumber = "42"
+                  offsetFromSymbolStart = "264">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "584481CB-0A17-4DFA-9302-CA61FE3B4BA7"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "movie-app/Scenes/Movie Details/Subviews/Similar Movies/SimilarMoviesVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "66"
+            endingLineNumber = "66"
+            landmarkName = "collectionView(_:numberOfItemsInSection:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "36A2202B-1FE7-4C10-A314-F01391A346EA"
-            shouldBeEnabled = "Yes"
+            uuid = "CDB7502C-AA7B-48D2-86B7-019E84890377"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "movie-app/Scenes/Movie List/MovieListVC.swift"
+            filePath = "movie-app/Scenes/Movie Details/Subviews/Similar Movies/SimilarMoviesPresenter.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "100"
-            endingLineNumber = "100"
-            landmarkName = "didTapAddToWatchlist(_:)"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
+            landmarkName = "loadSimilarMovies()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "E7875B21-299A-475A-AAB0-9CF8029226C0"
+            uuid = "5BD49B87-B7CD-4B98-8ADC-4200347854C3"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "movie-app/Scenes/Movie List/MovieListVC.swift"
+            filePath = "movie-app/Scenes/Movie Details/Subviews/Similar Movies/SimilarMoviesVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "101"
-            endingLineNumber = "101"
-            landmarkName = "didTapAddToWatchlist(_:)"
+            startingLineNumber = "71"
+            endingLineNumber = "71"
+            landmarkName = "collectionView(_:cellForItemAt:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "46199350-BE60-4299-B9E8-DF26C98E71FC"
+            uuid = "9C73E35C-BB00-47F2-B1FC-6F38A6D26137"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "movie-app/Scenes/Movie List/Movie List Cell/MovieListCell.swift"
+            filePath = "movie-app/Scenes/Movie Details/Subviews/Similar Movies/SimilarMoviesVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "36"
-            endingLineNumber = "36"
-            landmarkName = "setWatchlistButton(for:)"
+            startingLineNumber = "70"
+            endingLineNumber = "70"
+            landmarkName = "collectionView(_:cellForItemAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "AE081DE4-6225-464A-8367-BCCB84EF16F6"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "movie-app/Scenes/Movie Details/Subviews/Cast And Crew/CastAndCrewVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "63"
+            endingLineNumber = "63"
+            landmarkName = "collectionView(_:cellForItemAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E0A5200B-8CB1-416C-AD65-21D0A589213B"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "movie-app/Scenes/Movie Details/Subviews/Cast And Crew/CastAndCrewVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
+            landmarkName = "numberOfSections(in:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
