@@ -8,7 +8,7 @@
 import Foundation
 
 protocol FetchMoviesUseCase {
-    func execute(completion: @escaping (Result<MovieListResponse, Error>) -> Void)
+    func execute(page: Int, completion: @escaping (Result<MovieListResponse, Error>) -> Void)
 }
 
 class FetchMoviesUseCaseImp: FetchMoviesUseCase {
@@ -18,7 +18,7 @@ class FetchMoviesUseCaseImp: FetchMoviesUseCase {
         self.movieService = movieService
     }
     
-    func execute(completion: @escaping (Result<MovieListResponse, Error>) -> Void) {
-        movieService.fetchMovies(completion: completion)
+    func execute(page: Int, completion: @escaping (Result<MovieListResponse, Error>) -> Void) {
+        movieService.fetchMovies(page: page, completion: completion)
     }
 }

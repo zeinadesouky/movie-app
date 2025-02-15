@@ -78,6 +78,10 @@ extension MovieListVC: UITableViewDelegate, UITableViewDataSource {
         presenter.didSelectMovie(at: indexPath)
     }
     
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        presenter.loadMoreMoviesIfNeeded(at: indexPath)
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MovieListCell", for: indexPath) as! MovieListCell
         cell.delegate = self

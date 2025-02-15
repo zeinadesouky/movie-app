@@ -8,5 +8,5 @@
 import Foundation
 
 protocol FetchMoviesServiceProtocol {
-    func fetchMovies(completion: @escaping (Result<MovieListResponse, Error>) -> Void)
+    func fetchMovies(page: Int, completion: @escaping (Result<MovieListResponse, Error>) -> Void)
 }

@@ -16,6 +16,10 @@ class MovieListPresenter {
     private var groupedMovies: [String: [MovieEntity]] = [:]
     private var sortedSections: [String] = []
     
+    private var currentPage = 1
+    private var totalPages = 1
+    private var isLoading = false
+    
     init(view: MovieListView, fetchMoviesUseCase: FetchMoviesUseCase, searchMoviesUseCase: SearchMoviesUseCase) {
         self.view = view
         self.fetchMoviesUseCase = fetchMoviesUseCase
@@ -41,19 +45,40 @@ class MovieListPresenter {
     }
     
     
+
     func loadMovies() {
-        fetchMoviesUseCase.execute { [weak self] result in
+        guard !isLoading, currentPage <= totalPages else { return }
+        isLoading = true
+
+        fetchMoviesUseCase.execute(page: currentPage) { [weak self] result in
             DispatchQueue.main.async {
+                guard let self = self else { return }
+                self.isLoading = false
+
                 switch result {
-                case .success(let movies):
-                    let movieEntities = (movies.results ?? []).map { $0.toMovieEntity() }
-                    self?.popularMovies = movies.results ?? []
-                    self?.groupMoviesByYear(movieEntities)
-                    self?.view?.reloadTableView()
+                case .success(let moviesResponse):
+                    let movieEntities = (moviesResponse.results ?? []).map { $0.toMovieEntity() }
+                    
+                    // Append movies to the existing list
+                    self.popularMovies.append(contentsOf: moviesResponse.results ?? [])
+                    self.groupMoviesByYear(movieEntities)
+                    
+                    self.totalPages = moviesResponse.totalPages ?? 1
+                    self.currentPage += 1
+                    
+                    self.view?.reloadTableView()
+                    
                 case .failure(let error):
-                    self?.view?.displayError(error.localizedDescription)
+                    self.view?.displayError(error.localizedDescription)
                 }
             }
+        }
+    }
+    
+    func loadMoreMoviesIfNeeded(at indexPath: IndexPath) {
+        let key = sortedSections[indexPath.section]
+        if let moviesInSection = groupedMovies[key], indexPath.row == moviesInSection.count - 1 {
+            loadMovies()
         }
     }
     
@@ -119,8 +144,8 @@ class MovieListPresenter {
     
     // Private Helpers
     private func groupMoviesByYear(_ movies: [MovieEntity]) {
-        var tempGroupedMovies: [String: [MovieEntity]] = [:]
-        
+        var tempGroupedMovies = groupedMovies // Preserve previous results
+
         for movie in movies {
             if let date = movie.formattedReleaseDate {
                 let year = Calendar.current.component(.year, from: date)

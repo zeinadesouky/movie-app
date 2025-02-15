@@ -8,7 +8,9 @@
 import Foundation
 
 class FetchMoviesService: FetchMoviesServiceProtocol {
-    func fetchMovies(completion: @escaping (Result<MovieListResponse, Error>) -> Void) {
-        NetworkService.shared.fetchData(from: "https://api.themoviedb.org/3/movie/popular", completion: completion)
+    func fetchMovies(page: Int, completion: @escaping (Result<MovieListResponse, Error>) -> Void) {
+        NetworkService.shared.fetchData(from: "https://api.themoviedb.org/3/movie/popular",
+                                        queryParams: ["page": page.description],
+                                        completion: completion)
     }
 }
