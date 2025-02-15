@@ -26,13 +26,14 @@ class MovieListVC: UIViewController, MovieListView {
         super.viewDidLoad()
         setupTableView()
         setupSearchBar()
+        presenter.loadMovies()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         // REVIST: reloading results is not the optimal way to reflect watchlist status after changing it within product details
         if presenter.isViewingSearchResults {
             presenter.searchMovies(with: searchBar.text ?? "")
-        } else { presenter.loadMovies() }
+        } else { presenter.resetMovieEntities() }
     }
     
     private func setupSearchBar() {
@@ -98,6 +99,7 @@ extension MovieListVC: UISearchBarDelegate {
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         presenter.searchMovies(with: searchBar.text ?? "")
+        tableView.setContentOffset(CGPoint(x: 0, y: 0), animated: true)
     }
 }
 

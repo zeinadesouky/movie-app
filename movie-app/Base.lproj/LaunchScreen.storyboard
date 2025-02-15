@@ -16,22 +16,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="rnN-9E-gBF">
-                                <rect key="frame" x="186" y="416" width="20" height="20"/>
-                                <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </activityIndicatorView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LaunchLogo" translatesAutoresizingMaskIntoConstraints="NO" id="vnQ-Y9-7Ld">
+                                <rect key="frame" x="126.66666666666669" y="368.66666666666669" width="140" height="140"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="140" id="8ax-jU-bS0"/>
+                                    <constraint firstAttribute="width" constant="140" id="OEC-Oj-g4g"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.18431372549019609" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.15686274509803921" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="rnN-9E-gBF" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="A7b-sb-UoZ"/>
-                            <constraint firstItem="rnN-9E-gBF" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="DfE-yK-F8n"/>
+                            <constraint firstItem="vnQ-Y9-7Ld" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Rcw-sD-UbV"/>
+                            <constraint firstItem="vnQ-Y9-7Ld" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="mRI-Mi-fJA"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="52.671755725190835" y="374.64788732394368"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="LaunchLogo" width="512" height="512"/>
+    </resources>
 </document>

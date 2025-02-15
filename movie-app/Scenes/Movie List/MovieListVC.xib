@@ -24,7 +24,7 @@
                 <searchBar contentMode="redraw" placeholder="Search Movies..." translatesAutoresizingMaskIntoConstraints="NO" id="70h-3c-Wu1">
                     <rect key="frame" x="25" y="59" width="343" height="56"/>
                     <color key="barTintColor" red="0.0" green="0.0" blue="0.18424934439999999" alpha="1" colorSpace="calibratedRGB"/>
-                    <textInputTraits key="textInputTraits"/>
+                    <textInputTraits key="textInputTraits" returnKeyType="search"/>
                     <connections>
                         <outlet property="delegate" destination="-1" id="t3r-kC-cv7"/>
                     </connections>
@@ -36,7 +36,7 @@
                 </tableView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <color key="backgroundColor" red="0.0" green="0.0" blue="0.18431372549019609" alpha="1" colorSpace="calibratedRGB"/>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.15686274509803921" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="dU7-85-SMP" secondAttribute="trailing" constant="25" id="2NL-2A-H2F"/>
                 <constraint firstItem="dU7-85-SMP" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="25" id="8X5-se-h9c"/>
