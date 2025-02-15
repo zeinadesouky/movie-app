@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SimilarMoviesVC" customModule="movie_app" customModuleProvider="target">
+            <connections>
+                <outlet property="collectionView" destination="lGt-oe-GYd" id="59o-ST-JGR"/>
+                <outlet property="containerView" destination="ycf-gq-yqk" id="PAF-cp-h8R"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="178"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="AOH-hP-1zE">
+                    <rect key="frame" x="0.0" y="0.0" width="393" height="178"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Similar Movies" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c6h-hl-idW">
+                            <rect key="frame" x="0.0" y="0.0" width="393" height="19.333333333333332"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ycf-gq-yqk">
+                            <rect key="frame" x="0.0" y="19.333333333333329" width="393" height="158.66666666666669"/>
+                            <subviews>
+                                <collectionView multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="lGt-oe-GYd">
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="158.66666666666666"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" priority="750" constant="158" id="7US-fu-KWw"/>
+                                    </constraints>
+                                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Ws9-mL-GTJ">
+                                        <size key="itemSize" width="80" height="128"/>
+                                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    </collectionViewFlowLayout>
+                                </collectionView>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="lGt-oe-GYd" secondAttribute="trailing" id="34Y-EP-QQR"/>
+                                <constraint firstAttribute="bottom" secondItem="lGt-oe-GYd" secondAttribute="bottom" id="3mx-iR-BHd"/>
+                                <constraint firstItem="lGt-oe-GYd" firstAttribute="leading" secondItem="ycf-gq-yqk" secondAttribute="leading" id="cfN-pw-AZD"/>
+                                <constraint firstAttribute="height" priority="750" constant="200" id="gJV-2f-W7j"/>
+                                <constraint firstItem="lGt-oe-GYd" firstAttribute="top" secondItem="ycf-gq-yqk" secondAttribute="top" id="wBU-pe-vAL"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="AOH-hP-1zE" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="0Gc-sa-VYU"/>
+                <constraint firstAttribute="trailing" secondItem="AOH-hP-1zE" secondAttribute="trailing" id="ckA-FF-jBM"/>
+                <constraint firstAttribute="bottom" secondItem="AOH-hP-1zE" secondAttribute="bottom" id="dk1-Mj-gMo"/>
+                <constraint firstItem="AOH-hP-1zE" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="tTI-4S-y9B"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="93.89312977099236" y="-217.60563380281693"/>
+        </view>
+    </objects>
+</document>

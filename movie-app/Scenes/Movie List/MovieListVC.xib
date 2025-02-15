@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MovieListVC" customModule="movie_app" customModuleProvider="target">
+            <connections>
+                <outlet property="searchBar" destination="70h-3c-Wu1" id="31U-eV-WR7"/>
+                <outlet property="tableView" destination="dU7-85-SMP" id="9Sj-HN-kG4"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <searchBar contentMode="redraw" placeholder="Search Movies..." translatesAutoresizingMaskIntoConstraints="NO" id="70h-3c-Wu1">
+                    <rect key="frame" x="25" y="59" width="343" height="56"/>
+                    <color key="barTintColor" red="0.0" green="0.0" blue="0.18424934439999999" alpha="1" colorSpace="calibratedRGB"/>
+                    <textInputTraits key="textInputTraits" returnKeyType="search"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="t3r-kC-cv7"/>
+                    </connections>
+                </searchBar>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="dU7-85-SMP">
+                    <rect key="frame" x="25" y="135" width="343" height="683"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="separatorColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
+                </tableView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.15686274509803921" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="dU7-85-SMP" secondAttribute="trailing" constant="25" id="2NL-2A-H2F"/>
+                <constraint firstItem="dU7-85-SMP" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="25" id="8X5-se-h9c"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="dU7-85-SMP" secondAttribute="bottom" id="BnG-RR-yba"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="70h-3c-Wu1" secondAttribute="trailing" constant="25" id="Br6-7P-cg7"/>
+                <constraint firstItem="70h-3c-Wu1" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="azf-Zd-bTg"/>
+                <constraint firstItem="70h-3c-Wu1" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="25" id="b6V-KF-f85"/>
+                <constraint firstItem="dU7-85-SMP" firstAttribute="top" secondItem="70h-3c-Wu1" secondAttribute="bottom" constant="20" id="zaA-If-zbQ"/>
+            </constraints>
+            <point key="canvasLocation" x="101.5267175572519" y="19.718309859154932"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="tertiarySystemGroupedBackgroundColor">
+            <color red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
